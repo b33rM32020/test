@@ -86,8 +86,7 @@ for file in listoffiles:
         lon, lat = coordinates(imageobject)
         if lon and lat:
             print("http://maps.google.com/maps?q=%.9f,%.9f&z=15" % (lat, lon))
-    if args.display: 
-        #Resize the image to 350x350 and display it
+    if args.display:         
         chng = 500.0 / imageobject.size[0]
         newsize = (int(imageobject.size[0]*chng), int(imageobject.size[1]*chng))
         newimage = imageobject.resize(newsize, Image.ANTIALIAS)
